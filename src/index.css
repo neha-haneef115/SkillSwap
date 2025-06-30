@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-primary-600 text-white font-semibold py-4 px-8 rounded-2xl shadow-2xl hover:shadow-primary-600/25 transform hover:scale-105 transition-all duration-300 ease-out hover:bg-primary-700;
+  }
+  
+  .btn-primary:hover {
+    @apply shadow-2xl;
+    box-shadow: 0 20px 40px rgba(30, 81, 40, 0.3), 0 0 30px rgba(30, 81, 40, 0.2);
+  }
+  
+  .btn-secondary {
+    @apply relative overflow-hidden bg-gradient-to-r from-white to-neutral-50 text-gray-900 font-semibold py-4 px-8 rounded-2xl shadow-2xl hover:shadow-xl border border-neutral-200 transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-gradient-to-r from-neutral-50 to-white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    @apply w-full px-6 py-4 rounded-2xl border-2 border-neutral-200 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-200/50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 border border-white/20;
+  }
+  
+  .card-dark {
+    @apply bg-neutral-900/90 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 border border-neutral-700/50;
+  }
+  
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl;
+  }
+  
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+  }
+  
+  .hero-bg {
+    background: radial-gradient(circle at 20% 80%, rgba(30, 81, 40, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 81, 40, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(30, 81, 40, 0.05) 0%, transparent 50%);
+  }
+  
+  .section-bg {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  }
+  
+  .dark-section-bg {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  }
+}
